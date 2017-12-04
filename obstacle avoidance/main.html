@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<script src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/prog.css">
+	</head>
+
+	<body>
+		<div class='scene'>
+			<div class='grass' id='topDebug'></div>
+			<div class='road'>
+				<div class='ai' id='ai'>
+					<div class='sensor_1'>1</div>
+					<div class='sensor_2' id='sensor_2'>2</div>
+					<div class='sensor_3'>3</div>
+				</div>
+				<div class='wall' id='wall'></div>
+			</div>
+			<div class='grass'></div>
+		</div>
+
+<div class='debugArea'>
+
+    <!-- <input type='text' id='stepsDone' value='0' style='width:50px' /> -->
+		<div>
+    <table class='tableDebugSmall' style="float:left">
+      <tr>
+        <th>AI zone</th><th>Wall zone</th><th>Do</th><th>Success</th>
+      </tr>
+      <tr><td>0</td><td>0</td><td>0</td><td id='succ_000'>0</td></tr>
+      <tr><td>0</td><td>0</td><td>1</td><td id='succ_001'>0</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td><td id='succ_010'>0</td></tr>
+      <tr><td>0</td><td>1</td><td>1</td><td id='succ_011'>0</td></tr>
+      <tr><td>1</td><td>0</td><td>0</td><td id='succ_100'>0</td></tr>
+      <tr><td>1</td><td>0</td><td>1</td><td id='succ_101'>0</td></tr>
+      <tr><td>1</td><td>1</td><td>0</td><td id='succ_110'>0</td></tr>
+      <tr><td>1</td><td>1</td><td>1</td><td id='succ_111'>0</td></tr>
+    </table>
+	</div>
+	<div>
+		<div style="float:left;width:30%">
+			<div style="float: top">
+				<input class="button" type='button' value='Start' onClick="runSim('1')" />
+				<input class="button" type='button' value='Stop' onClick="runSim('0')" />
+			</div>
+			<div style="float: bottom">
+				<input class="info" type='button' id="collision" value='Collision' style="white-space: normal;"/>
+				<input class="info" type='button' disabled="disabled" id="avoided" value='Avoided' style="white-space: normal;"></input>
+			</div>
+
+		</div>
+		<div style="float:right;width:20%">
+			<input class="info" id="success" type='button' value='Success' style="white-space: normal;"/>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
